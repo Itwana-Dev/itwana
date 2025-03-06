@@ -8,8 +8,8 @@ const Features = () => {
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="Nuestras Soluciones"
+            paragraph="En Itwana, estudiamos a fondo los requerimientos de tu negocio para diseñar e implementar soluciones de software a medida, garantizando que se adapten perfectamente a tus necesidades y objetivos estratégicos."
             center
           />
 
