@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
+  title: "Itwana Soluciones",
+  description: "Desarrollo de software",
   // other metadata
 };
 
@@ -14,8 +14,8 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Quienes somos"
+        description="En Itwana, somos un equipo de profesionales comprometidos con la innovación y el desarrollo tecnológico. Nuestra misión es acercar la tecnología a emprendedores, empresarios y visionarios, brindándoles soluciones de vanguardia para convertir sus ideas en realidades escalables y de alto impacto."
       />
       <AboutSectionOne />
       <AboutSectionTwo />

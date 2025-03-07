@@ -24,8 +24,9 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Identidad y Propósito"
+                paragraph="Más que una empresa, una visión
+En Itwana, creemos en el poder de la tecnología para transformar ideas en realidades. Somos un equipo apasionado por la innovación, que trabaja cada día para acercar soluciones digitales a quienes buscan marcar la diferencia."
                 mb="44px"
               />
 
@@ -35,15 +36,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text="Creemos en el cambio y la evolución constante" />
+                    <List text="Valoramos la creatividad, la colaboración y el impacto real." />
+                    <List text="Nuestro compromiso es hacer la tecnología accesible y efectiva para todos." />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="Innovamos con propósito, creando soluciones que generan valor real." />
+                    <List text="Ponemos a las personas en el centro de la tecnología, facilitando su adopción y uso." />
+                    <List text=" Nos impulsa la excelencia y la mejora continua en cada desafío que enfrentamos." />
                   </div>
                 </div>
               </div>
