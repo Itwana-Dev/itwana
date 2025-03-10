@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/Common/SectionTitle";
+import ModalVideo from "react-modal-video";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -25,6 +27,8 @@ const fadeInUp = {
 };
 
 export default function DevopsSection() {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <section id="devops" className="pt-24 md:pt-32 lg:pt-40 relative">
       {/* Elementos decorativos de Radial Gradient */}
@@ -68,7 +72,7 @@ export default function DevopsSection() {
                 <List text="Optimización y escalabilidad garantizadas." />
               </div>
             </motion.div>
-            {/* Columna de Imagen */}
+            {/* Columna de Imagen con botón de video */}
             <motion.div
               className="w-full px-4 lg:w-1/2"
               initial="hidden"
@@ -84,11 +88,35 @@ export default function DevopsSection() {
                   fill
                   className="mx-auto max-w-full drop-shadow-three"
                 />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <button
+                    aria-label="video play button"
+                    onClick={() => setOpen(true)}
+                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
+                  >
+                    <svg
+                      width="16"
+                      height="18"
+                      viewBox="0 0 16 18"
+                      className="fill-current"
+                    >
+                      <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.5 17.564 0.5 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </motion.div>
           </div>
         </div>
       </div>
+
+      <ModalVideo
+        channel="youtube"
+        autoplay
+        isOpen={isOpen}
+        videoId="D2udYgTX2YU&t"
+        onClose={() => setOpen(false)}
+      />
     </section>
   );
 }
