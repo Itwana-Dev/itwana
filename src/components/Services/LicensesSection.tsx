@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/Common/SectionTitle";
 import ModalVideo from "react-modal-video";
+import CTAButton from "@/components/Common/CTAButton"; // Importamos el componente
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -106,6 +107,12 @@ export default function LicensesSection() {
                 <List text="Licencias flexibles y escalables." />
                 <List text="Asesoría experta en tecnologías emergentes." />
                 <List text="Implementación rápida y eficiente." />
+                {/* Uso del componente CTAButton */}
+                <div className="mt-8">
+                  <CTAButton onClick={() => (window.location.href = "/contact")}>
+                    Solicitar cotización
+                  </CTAButton>
+                </div>
               </div>
             </motion.div>
           </div>

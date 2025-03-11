@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import SectionTitle from "@/components/Common/SectionTitle";
 import ModalVideo from "react-modal-video";
+// Importa el componente CTAButton
+import CTAButton from "@/components/Common/CTAButton";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -39,8 +41,16 @@ export default function SoftwareSection() {
                 <List text="Soluciones personalizadas y optimizadas." />
                 <List text="Aplicaciones móviles y web de vanguardia." />
                 <List text="Automatización y control con tecnología de punta." />
+
+                {/* Uso del nuevo componente CTAButton */}
+                <div className="mt-8">
+                  <CTAButton onClick={() => (window.location.href = "/contact")}>
+                    Solicitar cotización
+                  </CTAButton>
+                </div>
               </div>
             </div>
+
             {/* Columna de Imagen con botón de video */}
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px]">
@@ -62,7 +72,7 @@ export default function SoftwareSection() {
                       viewBox="0 0 16 18"
                       className="fill-current"
                     >
-                      <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.5 17.564 0.5 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
+                      <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.5 17.564 0.5 16.7942V1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
                     </svg>
                   </button>
                 </div>
