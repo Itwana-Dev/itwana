@@ -22,11 +22,7 @@ export default function Home() {
       <Features />
       <Video />
       <Brands />
-     
-      <Testimonials />
-    
-      
-      
+     <Testimonials />
     </>
   );
 }
