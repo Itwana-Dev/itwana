@@ -1,6 +1,7 @@
 "use client";
 
 import { MouseEventHandler, ReactNode } from "react";
+import Image from "next/image";
 
 interface CTAButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
@@ -24,6 +25,13 @@ export default function CTAButton({ onClick, children }: CTAButtonProps) {
         hover:shadow-md
       "
     >
+      <Image
+        src="/images/logo/whatsapp.svg"
+        alt="WhatsApp icon"
+        width={40}
+        height={40}
+        className="mr-2"
+      />
       {children}
     </button>
   );

@@ -107,12 +107,12 @@ export default function LicensesSection() {
                 <List text="Licencias flexibles y escalables." />
                 <List text="Asesoría experta en tecnologías emergentes." />
                 <List text="Implementación rápida y eficiente." />
-                {/* Uso del componente CTAButton */}
-                <div className="mt-8">
-                  <CTAButton onClick={() => (window.location.href = "/contact")}>
-                    Solicitar cotización
-                  </CTAButton>
-                </div>
+                {/* Botón de CTA centrado que abre WhatsApp en una nueva pestaña */}
+                              <div className="mt-8">
+                                <CTAButton onClick={() => window.open("https://wa.link/4zj2ia", "_blank")}>
+                                  Solicitar cotización
+                                </CTAButton>
+                              </div>
               </div>
             </motion.div>
           </div>

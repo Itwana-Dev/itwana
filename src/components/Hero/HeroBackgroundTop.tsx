@@ -1,14 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
-import { fadeCircles, drawPaths } from "./heroVariants";
 
 const HeroBackgroundTop = () => {
   return (
-    <motion.div
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 4, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
-      className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100"
-    >
+    <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
       <svg
         width="450"
         height="556"
@@ -16,48 +10,18 @@ const HeroBackgroundTop = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Círculos y paths con animación de fade/scale o dibujo */}
-        <motion.circle
-          variants={fadeCircles}
-          initial="hidden"
-          animate="visible"
-          cx="277"
-          cy="63"
-          r="225"
-          fill="url(#paint0_linear_25:217)"
-        />
-        <motion.circle
-          variants={fadeCircles}
-          initial="hidden"
-          animate="visible"
-          cx="17.9997"
-          cy="182"
-          r="18"
-          fill="url(#paint1_radial_25:217)"
-        />
-        <motion.circle
-          variants={fadeCircles}
-          initial="hidden"
-          animate="visible"
-          cx="76.9997"
-          cy="288"
-          r="34"
-          fill="url(#paint2_radial_25:217)"
-        />
-        <motion.circle
-          variants={fadeCircles}
-          initial="hidden"
-          animate="visible"
+        {/* Círculos y paths sin animación */}
+        <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)" />
+        <circle cx="17.9997" cy="182" r="18" fill="url(#paint1_radial_25:217)" />
+        <circle cx="76.9997" cy="288" r="34" fill="url(#paint2_radial_25:217)" />
+        <circle
           cx="325.486"
           cy="302.87"
           r="180"
           transform="rotate(-37.6852 325.486 302.87)"
           fill="url(#paint3_linear_25:217)"
         />
-        <motion.circle
-          variants={drawPaths} // Usamos drawPaths para animar el "stroke"
-          initial="hidden"
-          animate="visible"
+        <circle
           opacity="0.8"
           cx="184.521"
           cy="315.521"
@@ -65,10 +29,7 @@ const HeroBackgroundTop = () => {
           transform="rotate(114.874 184.521 315.521)"
           stroke="url(#paint4_linear_25:217)"
         />
-        <motion.circle
-          variants={drawPaths}
-          initial="hidden"
-          animate="visible"
+        <circle
           opacity="0.8"
           cx="356"
           cy="290"
@@ -76,10 +37,7 @@ const HeroBackgroundTop = () => {
           transform="rotate(-30 356 290)"
           stroke="url(#paint5_linear_25:217)"
         />
-        <motion.circle
-          variants={fadeCircles}
-          initial="hidden"
-          animate="visible"
+        <circle
           opacity="0.8"
           cx="191.659"
           cy="302.659"
@@ -167,7 +125,7 @@ const HeroBackgroundTop = () => {
           </linearGradient>
         </defs>
       </svg>
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,14 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
-import { drawPaths, fadeCircles } from "./heroVariants";
 
 const HeroBackgroundBottom = () => {
   return (
-    <motion.div
-      animate={{ y: [0, 10, 0] }}
-      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100"
-    >
+    <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
       <svg
         width="364"
         height="201"
@@ -16,38 +10,23 @@ const HeroBackgroundBottom = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          variants={drawPaths}
-          initial="hidden"
-          animate="visible"
+        <path
           d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
           stroke="url(#paint0_linear_25:218)"
         />
-        <motion.path
-          variants={drawPaths}
-          initial="hidden"
-          animate="visible"
+        <path
           d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
           stroke="url(#paint1_linear_25:218)"
         />
-        <motion.path
-          variants={drawPaths}
-          initial="hidden"
-          animate="visible"
+        <path
           d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
           stroke="url(#paint2_linear_25:218)"
         />
-        <motion.path
-          variants={drawPaths}
-          initial="hidden"
-          animate="visible"
+        <path
           d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
           stroke="url(#paint3_linear_25:218)"
         />
-        <motion.circle
-          variants={drawPaths}
-          initial="hidden"
-          animate="visible"
+        <circle
           opacity="0.8"
           cx="214.505"
           cy="60.5054"
@@ -55,15 +34,7 @@ const HeroBackgroundBottom = () => {
           transform="rotate(-13.421 214.505 60.5054)"
           stroke="url(#paint4_linear_25:218)"
         />
-        <motion.circle
-          variants={fadeCircles}
-          initial="hidden"
-          animate="visible"
-          cx="220"
-          cy="63"
-          r="43"
-          fill="url(#paint5_radial_25:218)"
-        />
+        <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
         <defs>
           <linearGradient
             id="paint0_linear_25:218"
@@ -133,7 +104,7 @@ const HeroBackgroundBottom = () => {
           </radialGradient>
         </defs>
       </svg>
-    </motion.div>
+    </div>
   );
 };
 

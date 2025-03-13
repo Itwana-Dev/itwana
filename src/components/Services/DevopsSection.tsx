@@ -72,11 +72,12 @@ export default function DevopsSection() {
                 <List text="Monitorización en tiempo real." />
                 <List text="Optimización y escalabilidad garantizadas." />
                 {/* Agregamos el CTAButton */}
-                <div className="mt-8">
-                  <CTAButton onClick={() => (window.location.href = "/contact")}>
-                    Solicitar cotización
-                  </CTAButton>
-                </div>
+                {/* Botón de CTA centrado que abre WhatsApp en una nueva pestaña */}
+                              <div className="mt-8">
+                                <CTAButton onClick={() => window.open("https://wa.link/4zj2ia", "_blank")}>
+                                  Solicitar cotización
+                                </CTAButton>
+                              </div>
               </div>
             </motion.div>
             {/* Columna de Imagen con botón de video */}

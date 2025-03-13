@@ -1,3 +1,4 @@
+"use client";
 export const drawPaths = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {

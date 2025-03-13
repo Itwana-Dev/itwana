@@ -42,12 +42,12 @@ export default function SoftwareSection() {
                 <List text="Aplicaciones móviles y web de vanguardia." />
                 <List text="Automatización y control con tecnología de punta." />
 
-                {/* Uso del nuevo componente CTAButton */}
-                <div className="mt-8">
-                  <CTAButton onClick={() => (window.location.href = "/contact")}>
-                    Solicitar cotización
-                  </CTAButton>
-                </div>
+               {/* Botón de CTA centrado que abre WhatsApp en una nueva pestaña */}
+                             <div className="mt-8">
+                               <CTAButton onClick={() => window.open("https://wa.link/4zj2ia", "_blank")}>
+                                 Solicitar cotización
+                               </CTAButton>
+                             </div>
               </div>
             </div>
 
