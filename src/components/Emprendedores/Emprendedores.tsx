@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 // Importamos cada sección por separado
 import IdeaSection from "./IdeaSection";
-import PlanificacionSection from "./PlanificacionSection";
 import LanzamientoSection from "./LanzamientoSection";
+import Pricing from "../Pricing";
 
 // Mantenemos la misma estructura de variants
 const sectionVariants = {
@@ -35,7 +35,7 @@ export default function Emprendedores() {
         viewport={{ amount: 0.3 }}
         variants={sectionVariants}
       >
-        <PlanificacionSection />
+        <Pricing />
       </motion.div>
 
       <motion.div

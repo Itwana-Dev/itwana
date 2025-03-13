@@ -1,3 +1,4 @@
+"use client";
 import { Menu } from "@/types/menu";
 
 const menuData: Menu[] = [
@@ -9,7 +10,7 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "Quienes somos",
+    title: "ITWANA",
     path: "/about",
     newTab: false,
   },

@@ -33,7 +33,7 @@ export default function IdeaSection() {
 
             {/* Párrafo principal optimizado */}
             <p className="text-lg mb-8">
-              ¿Tienes un emprendimiento o quieres iniciar uno? En <span className="text-primary">Itwana</span> impulsamos tu negocio con soluciones web innovadoras y marketing digital para aumentar tus ventas online de forma rápida y profesional.
+              ¿Tienes un emprendimiento o quieres iniciar uno? En <span className="text-primary">ITWANA</span> impulsamos tu negocio con soluciones web innovadoras y marketing digital para aumentar tus ventas online de forma rápida y profesional.
             </p>
 
             {/* Sección de Bullets en dos columnas */}
@@ -87,6 +87,7 @@ export default function IdeaSection() {
   );
 }
 
+
 /* Ícono de ejemplo para cada bullet */
 function BulletIcon() {
   return (
@@ -96,7 +97,9 @@ function BulletIcon() {
       className="fill-current text-primary"
       viewBox="0 0 24 24"
     >
-      <path d="M12 2C6.488 2 2 6.486 2 12s4.488 10 10 10 10-4.486 10-10S17.512 2 12 2zm5 10.999a1 1 0 01-1 1H8a1 1 0 110-2h8a1 1 0 011 1z" />
+      <path d="M19,11H13V5c0-0.55-0.45-1-1-1S11,4.45,11,5v6H5c-0.55,0-1,0.45-1,1s0.45,1,1,1h6v6c0,0.55,0.45,1,1,1s1-0.45,1-1v-6h6
+               c0.55,0,1-0.45,1-1S19.55,11,19,11z"/>
     </svg>
   );
 }
+

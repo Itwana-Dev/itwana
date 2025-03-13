@@ -1,106 +1,215 @@
 "use client";
-import { useState } from "react";
+
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 
 const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
-
   return (
-    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
-      <div className="container">
+    <section
+      id="pricing"
+      className="relative z-10 py-16 md:py-20 lg:py-28 bg-gray-50 dark:bg-gray-900"
+    >
+      <div className="container px-4 mx-auto">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Nuestros Planes"
+          paragraph="Elige el plan que mejor se adapte a tus necesidades y haz crecer tu presencia digital."
           center
           width="665px"
         />
 
-        <div className="w-full">
-          <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
-            <span
-              onClick={() => setIsMonthly(true)}
-              className={`${
-                isMonthly
-                  ? "pointer-events-none text-primary"
-                  : "text-dark dark:text-white"
-              } mr-4 cursor-pointer text-base font-semibold`}
-            >
-              Monthly
-            </span>
-            <div
-              onClick={() => setIsMonthly(!isMonthly)}
-              className="flex cursor-pointer items-center"
-            >
-              <div className="relative">
-                <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
-                <div
-                  className={`${
-                    isMonthly ? "" : "translate-x-full"
-                  } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
-                >
-                  <span className="active h-4 w-4 rounded-full bg-white"></span>
-                </div>
-              </div>
-            </div>
-            <span
-              onClick={() => setIsMonthly(false)}
-              className={`${
-                isMonthly
-                  ? "text-dark dark:text-white"
-                  : "pointer-events-none text-primary"
-              } ml-4 cursor-pointer text-base font-semibold`}
-            >
-              Yearly
-            </span>
-          </div>
-        </div>
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {/* Plan "Emprende" – (Basado en Páginas Web Positrón) */}
+          <PricingBox
+            packageName="Plan Basico"
+            price="600.000 COP"
+            duration="" 
+            subtitle="Solucion Inicial ideal para emprendedores que dan sus primeros pasos y buscan una presencia profesional sin complicaciones."
+          >
+            <OfferList
+              text="Hosting + Dominio"
+              status="active"
+            />
+            <OfferList
+              text="Páginas y secciones firmes más el Home"
+              status="active"
+            />
+            <OfferList
+              text="Integración con redes sociales"
+              status="active"
+            />
+            <OfferList
+              text="Formulario de contacto"
+              status="active"
+            />
+            <OfferList
+              text="Google My Business"
+              status="active"
+            />
+            <OfferList
+              text="Certificado SSL"
+              status="active"
+            />
+            <OfferList
+              text="Backup y seguridad"
+              status="active"
+            />
+            <OfferList
+              text="Panel administrable"
+              status="active"
+            />
+            <OfferList
+              text="Correos corporativos"
+              status="active"
+            />
+          </PricingBox>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+          {/* Plan "Impulsa" – (Basado en Páginas Web Neutrón) */}
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Plan Medio"
+            price="800.000 COP"
+            duration=""
+            subtitle="Solucion de crecimiento ideal para negocios en expansión que requieren mayor capacidad y funcionalidades adicionales."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList
+              text="Hosting + Dominio"
+              status="active"
+            />
+            <OfferList
+              text="Hasta 8 páginas firmes más el Home"
+              status="active"
+            />
+            <OfferList
+              text="Integración con redes sociales"
+              status="active"
+            />
+            <OfferList
+              text="Formularios de contacto"
+              status="active"
+            />
+            <OfferList
+              text="Google My Business"
+              status="active"
+            />
+            <OfferList
+              text="Certificado SSL"
+              status="active"
+            />
+            <OfferList
+              text="Backup y seguridad"
+              status="active"
+            />
+            <OfferList
+              text="Panel administrable"
+              status="active"
+            />
+            <OfferList
+              text="Correos corporativos"
+              status="active"
+            />
+            <OfferList
+              text="Chat online"
+              status="active"
+            />
+            <OfferList
+              text="Google Analytics"
+              status="active"
+            />
+            <OfferList
+              text="Tienda ecommerce"
+              status="active"
+            />
+            <OfferList
+              text="Pasarela de pagos"
+              status="active"
+            />
           </PricingBox>
+
+          {/* Plan "Lidera" – (Basado en Páginas Web Átomo) */}
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Plan Completo"
+            price="1'500.000 COP"
+            duration=""
+            subtitle="Solucion Premium ideal para quienes exigen el máximo rendimiento, seguridad y personalización para su sitio web."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
-          </PricingBox>
-          <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList
+              text="Hosting + Dominio"
+              status="active"
+            />
+            <OfferList
+              text="Hasta 10 páginas firmes más el Home"
+              status="active"
+            />
+            <OfferList
+              text="Integración con redes sociales"
+              status="active"
+            />
+            <OfferList
+              text="Formularios de contacto"
+              status="active"
+            />
+            <OfferList
+              text="Google My Business"
+              status="active"
+            />
+            <OfferList
+              text="Certificado SSL"
+              status="active"
+            />
+            <OfferList
+              text="Backup y seguridad"
+              status="active"
+            />
+            <OfferList
+              text="Panel administrable"
+              status="active"
+            />
+            <OfferList
+              text="Correos corporativos"
+              status="active"
+            />
+            <OfferList
+              text="Chat online"
+              status="active"
+            />
+            <OfferList
+              text="Google Analytics"
+              status="active"
+            />
+            <OfferList
+              text="Tienda ecommerce"
+              status="active"
+            />
+            <OfferList
+              text="Pasarela de pagos"
+              status="active"
+            />
+            <OfferList
+              text="Automatizaciones"
+              status="active"
+            />
+            <OfferList
+              text="Suscripciones"
+              status="active"
+            />
+            <OfferList
+              text="Integración de marketing"
+              status="active"
+            />
+            <OfferList
+              text="Web app"
+              status="active"
+            />
+            <OfferList
+              text="Realidad aumentada"
+              status="active"
+            />
           </PricingBox>
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 z-[-1]">
+      {/* Decoración SVG (opcional) */}
+      <div className="hidden md:block absolute bottom-0 left-0 z-[-1]">
         <svg
           width="239"
           height="601"
@@ -116,7 +225,7 @@ const Pricing = () => {
             height="541.607"
             rx="2"
             transform="rotate(-128.7 -184.451 600.973)"
-            fill="url(#paint0_linear_93:235)"
+            fill="url(#paint0_linear)"
           />
           <rect
             opacity="0.3"
@@ -126,11 +235,11 @@ const Pricing = () => {
             height="541.607"
             rx="2"
             transform="rotate(-128.7 -188.201 385.272)"
-            fill="url(#paint1_linear_93:235)"
+            fill="url(#paint1_linear)"
           />
           <defs>
             <linearGradient
-              id="paint0_linear_93:235"
+              id="paint0_linear"
               x1="-90.1184"
               y1="420.414"
               x2="-90.1184"
@@ -141,7 +250,7 @@ const Pricing = () => {
               <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
             <linearGradient
-              id="paint1_linear_93:235"
+              id="paint1_linear"
               x1="-159.441"
               y1="204.714"
               x2="-159.441"
