@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
+  title: "Itwana Soluciones",
+  description: "Soluciones Tecnologicas",
   // other metadata
 };
 
@@ -14,8 +14,8 @@ const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Itwana Tips"
+        description="En esta era digital es importante estar a la vanguardia con cada avance tecnologico que hay dia a dia inteligencia artificial para negocios,tendencias digitales y marketing digital te contamos un poco en nuestro blog."
       />
 
       <section className="pb-[120px] pt-[120px]">
@@ -39,7 +39,7 @@ const Blog = () => {
                     href="#0"
                     className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color transition hover:bg-primary hover:bg-opacity-100 hover:text-white"
                   >
-                    Prev
+                    Anterior
                   </a>
                 </li>
                 <li className="mx-1">
@@ -84,7 +84,7 @@ const Blog = () => {
                     href="#0"
                     className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color transition hover:bg-primary hover:bg-opacity-100 hover:text-white"
                   >
-                    Next
+                    Siguiente
                   </a>
                 </li>
               </ul>

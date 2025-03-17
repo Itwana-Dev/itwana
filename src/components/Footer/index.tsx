@@ -31,7 +31,7 @@ const Footer = () => {
                 </p>
                 <div className="flex items-center">
                   <a
-                    href="/"
+                    href="https://www.facebook.com/itwanasas/"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -51,7 +51,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="https://x.com/ItwanaTech"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -73,37 +73,41 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      width="18"
-                      height="14"
-                      viewBox="0 0 18 14"
-                      className="fill-current"
-                    >
-                      <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
-                    </svg>
-                  </a>
-                  <a
-                    href="/"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      width="17"
-                      height="16"
-                      viewBox="0 0 17 16"
-                      className="fill-current"
-                    >
-                      <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
-                    </svg>
-                  </a>
+  href="https://www.instagram.com/itwanadev/"
+  aria-label="social-link"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    className="fill-current"
+  >
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.353 3.608 1.327.975.976 1.265 2.243 1.327 3.609.058 1.265.07 1.645.07 4.849 0 3.205-.012 3.585-.07 4.85-.062 1.365-.353 2.632-1.327 3.607-.976.975-2.243 1.266-3.609 1.328-1.265.058-1.645.07-4.849.07-3.204 0-3.585-.012-4.85-.07-1.365-.062-2.632-.353-3.608-1.328-.975-.975-1.266-2.242-1.328-3.607C2.175 15.748 2.163 15.367 2.163 12.163c0-3.204.012-3.584.07-4.849.062-1.366.353-2.633 1.328-3.609.975-.974 2.242-1.265 3.607-1.327 1.266-.058 1.646-.07 4.85-.07zm0-2.163C8.741 0 8.333.013 7.052.072 5.777.13 4.659.436 3.678 1.418 2.697 2.399 2.391 3.517 2.333 4.793.013 8.333 0 8.741 0 12c0 3.259.013 3.667.072 4.948.058 1.276.364 2.394 1.345 3.375.981.982 2.099 1.288 3.375 1.346 1.281.059 1.689.072 4.948.072 3.259 0 3.667-.013 4.948-.072 1.276-.058 2.394-.364 3.375-1.346.982-.981 1.288-2.099 1.346-3.375.059-1.281.072-1.689.072-4.948 0-3.259-.013-3.667-.072-4.948-.058-1.276-.364-2.394-1.346-3.375-.981-.982-2.099-1.288-3.375-1.346C15.667.013 15.259 0 12 0z"/>
+    <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+    <circle cx="18.406" cy="5.594" r="1.44"/>
+  </svg>
+</a>
+
+<a
+  href="https://www.tiktok.com/@itwanasoluciones"
+  aria-label="social-link"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>
+  <svg
+    width="17"
+    height="17"
+    viewBox="0 0 24 24"
+    className="fill-current"
+  >
+    <path d="M12.518 2h3.299c.132 2.326 1.504 3.909 3.717 4.098v3.456c-1.36.132-2.566-.308-3.7-1.052v6.934c0 7.034-7.668 9.296-11.32 4.26-2.55-3.459-1.07-9.503 5.633-9.617v3.641c-.387.061-.793.152-1.15.285-1.098.403-1.665 1.222-1.558 2.345.298 3.088 5.172 3.952 5.079-1.922V2z"/>
+  </svg>
+</a>
+
                 </div>
               </div>
             </div>
@@ -124,7 +128,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/emprendedores"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Precios Emprendedores
