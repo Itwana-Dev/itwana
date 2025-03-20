@@ -54,7 +54,7 @@ const Contact = () => {
                         htmlFor="company"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Nombre de Empresa
+                        Nombre de Empresa O Emprendimiento
                       </label>
                       <input
                         type="text"
@@ -89,7 +89,7 @@ const Contact = () => {
                       <textarea
                         name="message"
                         rows={5}
-                        placeholder="Aqui puedes escribir tu mensaje queremos conecterte"
+                        placeholder="Aqui puedes escribir tu mensaje queremos conecterte a ti y a tu negocio"
                         className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       ></textarea>
                     </div>
