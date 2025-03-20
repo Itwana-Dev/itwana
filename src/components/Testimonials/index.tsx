@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Daniela Claros Andrade",
     designation: "Co-fundadora @todasflorecemos",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Diseñamos un MVP de nuestra app Bolsas Campesinas, acercando a las mujeres del campo a la tecnología y brindándoles nuevas oportunidades de comercialización.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -17,16 +17,16 @@ const testimonialData: Testimonial[] = [
     name: "Amaury Centeno",
     designation: "Founder SevenPlus ",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Creamos una plataforma para conectar y organizar torneos de deportes amateurs, facilitando la gestión de equipos y la pasión por el juego.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Cristian Centeno",
-    designation: "Founder ItwanaPlus",
+    name: "Alba Medina",
+    designation: "Co-fundadora @mujeresdeluz",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Diseñamos una landing impactante para nuestra fundación, transmitiendo nuestra misión y facilitando el apoyo a más mujeres en su camino al empoderamiento.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },

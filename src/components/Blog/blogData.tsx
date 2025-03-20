@@ -4,7 +4,7 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Ecommerce: Todo lo que debes saber",
+    title: "Ecommerce Para emprendedores, Todo lo que debes saber",
     paragraph: "Estrategias para vender por internet, marketing y mercado digital.",
     content: (
       <p className="text-base text-gray-700 leading-relaxed mb-6">
@@ -19,6 +19,8 @@ const blogData: Blog[] = [
         <p className="text-base text-gray-700 leading-relaxed mb-4">
           El ecommerce, o comercio electrónico, es la compra y venta de productos o servicios a través de internet. Abarca desde pequeñas tiendas artesanales hasta grandes plataformas internacionales. Su crecimiento exponencial se debe a la facilidad de acceso, la posibilidad de llegar a nuevos mercados y la eficiencia en los procesos de compra y venta. Al digitalizar tu negocio, tendrás la oportunidad de conectar de forma directa con tu público, conocer sus preferencias y adaptar tu oferta a sus necesidades.
         </p>
+       
+        
         <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
           2. Planificación y Estrategia
         </h3>
@@ -45,6 +47,7 @@ const blogData: Blog[] = [
         <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
           3. Elección de la Plataforma y Tecnología
         </h3>
+        <img src="/images/blog/extra1.png" alt="Imagen adicional 2" className="mb-6" />
         <p className="text-base text-gray-700 leading-relaxed mb-4">
           Seleccionar la herramienta adecuada para tu tienda online es clave. Existen múltiples opciones en el mercado, como Shopify, WooCommerce o Magento. Al elegir una plataforma, considera:
         </p>
@@ -101,6 +104,8 @@ const blogData: Blog[] = [
         <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
           6. Consejos para Emprendedores
         </h3>
+         {/* Se añaden 2 imágenes adicionales entre párrafos */}
+         <img src="/images/blog/extra2.png" alt="Imagen adicional 1" className="mb-6" />
         <ul className="list-disc ml-6 mb-4 text-gray-700">
           <li>
             <strong>Investiga y aprende continuamente:</strong> El mundo digital está en constante evolución. Participa en cursos, webinars y lee artículos especializados para mantenerte actualizado sobre tendencias y mejores prácticas.
@@ -146,7 +151,7 @@ const blogData: Blog[] = [
         </p>
       </>
     ),
-    image: "/images/blog/blog-01.jpg",
+    image: "/images/blog/blog-01.png",
     author: {
       name: "Daniela Claros",
       image: "/images/blog/author-01.png",
@@ -155,7 +160,7 @@ const blogData: Blog[] = [
     tags: ["Ecommerce", "Marketing", "Digital"],
     publishDate: "12 Jan 2025",
     views: 50,
-    comments: 35,
+    comments: null,
   },
   {
     id: 2,
@@ -176,6 +181,9 @@ const blogData: Blog[] = [
         <p className="text-base text-gray-700 leading-relaxed mb-4">
           La IA es la capacidad de las máquinas para imitar procesos cognitivos humanos, como el aprendizaje, la resolución de problemas y la toma de decisiones. A través de algoritmos y modelos de datos, la IA puede analizar grandes volúmenes de información y generar soluciones precisas y eficientes. Su aplicación se ha expandido a múltiples sectores, impulsando la innovación y transformando la forma en que interactuamos con la tecnología.
         </p>
+        {/* Se añaden 2 imágenes adicionales entre párrafos */}
+        
+      
         <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
           2. La IA en los Negocios
         </h3>
@@ -191,6 +199,7 @@ const blogData: Blog[] = [
         <h4 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
           Marketing y Atención al Cliente
         </h4>
+        <img src="/images/blog/extra3.png" alt="Imagen adicional 1" className="mb-6" />
         <p className="text-base text-gray-700 leading-relaxed mb-4">
           <strong>Chatbots y asistentes virtuales:</strong> Estas soluciones permiten ofrecer soporte 24/7, respondiendo consultas frecuentes y agilizando procesos de venta.
         </p>
@@ -236,6 +245,7 @@ const blogData: Blog[] = [
         <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
           5. La IA en Tareas Cotidianas
         </h3>
+        <img src="/images/blog/extra4.png" alt="Imagen adicional 2" className="mb-6" />
         <h4 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
           Organización y Asistencia Personal
         </h4>
@@ -293,7 +303,7 @@ const blogData: Blog[] = [
         </p>
       </>
     ),
-    image: "/images/blog/blog-02.jpg",
+    image: "/images/blog/blog-02.png",
     author: {
       name: "Amaury Centeno",
       image: "/images/blog/author-02.png",
@@ -302,7 +312,7 @@ const blogData: Blog[] = [
     tags: ["IA", "Tecnología", "Innovación"],
     publishDate: "15 Feb 2025",
     views: 75,
-    comments: 20,
+    comments: null,
   },
   {
     id: 3,
@@ -326,6 +336,9 @@ const blogData: Blog[] = [
         <p className="text-base text-gray-700 leading-relaxed mb-4">
           <strong>Digitalización de Documentos:</strong> Convertir archivos físicos en digitales no solo ayuda a reducir la huella de carbono, sino que también facilita el acceso, la búsqueda y el manejo de la información.
         </p>
+        {/* Se añaden 2 imágenes adicionales entre párrafos */}
+       
+        
         <p className="text-base text-gray-700 leading-relaxed mb-4">
           <strong>Procesos Ecoamigables:</strong> Al disminuir el uso de papel, las empresas contribuyen al cuidado del medio ambiente y reducen costos asociados a impresión, almacenamiento y distribución de documentos.
         </p>
@@ -362,6 +375,7 @@ const blogData: Blog[] = [
         <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
           3. Centralización de Datos
         </h3>
+        <img src="/images/blog/extra5.png" alt="Imagen adicional 1" className="mb-6" />
         <h4 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
           Integración y Accesibilidad
         </h4>
@@ -391,7 +405,7 @@ const blogData: Blog[] = [
         </p>
       </>
     ),
-    image: "/images/blog/blog-03.jpg",
+    image: "/images/blog/blog-03.png",
     author: {
       name: "Cristian Centeno",
       image: "/images/blog/author-03.png",
@@ -400,7 +414,7 @@ const blogData: Blog[] = [
     tags: ["Tecnología", "Empresas", "Innovación"],
     publishDate: "20 Mar 2024",
     views: 100,
-    comments: 40,
+    comments: null,
   },
 ];
 
