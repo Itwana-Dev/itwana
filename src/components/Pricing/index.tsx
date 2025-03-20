@@ -31,7 +31,7 @@ const Pricing = () => {
               status="active"
             />
             <OfferList
-              text="Páginas y secciones firmes más el Home"
+              text="Páginas y secciones  más el Home"
               status="active"
             />
             <OfferList
@@ -76,7 +76,7 @@ const Pricing = () => {
               status="active"
             />
             <OfferList
-              text="Hasta 8 páginas firmes más el Home"
+              text="Hasta 8 páginas más el Home"
               status="active"
             />
             <OfferList
@@ -137,7 +137,7 @@ const Pricing = () => {
               status="active"
             />
             <OfferList
-              text="Hasta 10 páginas firmes más el Home"
+              text="Hasta 10 páginas  más el Home"
               status="active"
             />
             <OfferList

@@ -57,19 +57,20 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
-                  alt="logo"
-                  width={150}
-                  height={40}
-                  className="w-full dark:hidden"
-                />
-                <Image
-                  src="/images/logo/logo.svg"
-                  alt="logo"
-                  width={150}
-                  height={40}
-                  className="hidden w-full dark:block"
-                />
+  src="/images/logo/logo-2.svg"
+  alt="logo"
+  width={200} // Aumentado de 150 a 200
+  height={60} // Aumentado de 40 a 60
+  className="w-full dark:hidden"
+/>
+<Image
+  src="/images/logo/logo.svg"
+  alt="logo"
+  width={200} // Aumentado de 150 a 200
+  height={60} // Aumentado de 40 a 60
+  className="hidden w-full dark:block"
+/>
+
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
