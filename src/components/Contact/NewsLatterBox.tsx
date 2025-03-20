@@ -1,50 +1,150 @@
 "use client";
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
+import { auth, db } from "../../../firebaseConfig"; // Ajusta la ruta según corresponda
+import { signInAnonymously } from "firebase/auth";
+import { doc, setDoc, getDoc } from "firebase/firestore";
 
 const WhatsAppContactBox = () => {
   const { theme } = useTheme();
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    timeSlot: "",
+  });
+  const [userUID, setUserUID] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [alert, setAlert] = useState({ message: "", type: "" });
+
+  // Función para mostrar notificaciones personalizadas (centradas)
+  const showAlert = (message, type = "success") => {
+    setAlert({ message, type });
+    // Ocultar el mensaje después de 5 segundos
+    setTimeout(() => setAlert({ message: "", type: "" }), 5000);
+  };
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validar campos requeridos
+    if (!formData.name || !formData.phone || !formData.timeSlot) {
+      showAlert("Por favor, diligencia todos los campos requeridos.", "error");
+      return;
+    }
+
+    // Si el usuario no está autenticado, autenticarlo de forma anónima
+    let uid = userUID;
+    if (!uid) {
+      try {
+        const userCredential = await signInAnonymously(auth);
+        uid = userCredential.user.uid;
+        setUserUID(uid);
+      } catch (error) {
+        console.error("Error al iniciar sesión anónima:", error);
+        showAlert("Error al iniciar sesión anónima", "error");
+        return;
+      }
+    }
+
+    // Verificar si ya existe un envío para este UID en la colección "whatsappContacts"
+    const docRef = doc(db, "whatsappContacts", uid);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      showAlert("Ya has enviado tu información desde este dispositivo.", "warning");
+      return;
+    }
+
+    // Guardar la información del formulario en Firestore
+    try {
+      await setDoc(docRef, {
+        ...formData,
+        uid,
+        timestamp: new Date(),
+      });
+      showAlert("Información enviada exitosamente.", "success");
+      setSubmitted(true);
+      // Redirigir al home después de 2 segundos (opcional)
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
+    } catch (error) {
+      console.error("Error al enviar la información:", error);
+      showAlert("Error al enviar la información. Inténtalo de nuevo.", "error");
+    }
+  };
 
   return (
     <div className="relative z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+      {/* Notificación personalizada centrada */}
+      {alert.message && (
+        <div
+          className={`fixed top-1/2 left-1/2 z-50 p-4 rounded shadow-lg transition-opacity duration-300 transform -translate-x-1/2 -translate-y-1/2 ${
+            alert.type === "success"
+              ? "bg-green-500 text-white"
+              : alert.type === "warning"
+              ? "bg-yellow-500 text-black"
+              : "bg-red-500 text-white"
+          }`}
+        >
+          {alert.message}
+        </div>
+      )}
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-        Escríbenos por WhatsApp
+        Te escribimos por WhatsApp
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
         Indícanos tu nombre, número de WhatsApp y selecciona tu franja horaria. Nuestros asesores se comunicarán contigo a la brevedad.
       </p>
-      <div>
-        <input
-          type="text"
-          name="name"
-          placeholder="Ingresa tu nombre"
-          className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-        />
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Ingresa tu número de WhatsApp"
-          className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-        />
-        <select
-          name="timeSlot"
-          className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-        >
-          <option value="">Selecciona tu franja horaria</option>
-          <option value="mañana">Mañana</option>
-          <option value="tarde">Tarde</option>
-          <option value="noche">Noche</option>
-        </select>
-        <input
-          type="submit"
-          value="Enviar"
-          className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
-        />
+      <form onSubmit={handleSubmit}>
+        <div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Ingresa tu nombre"
+            value={formData.name}
+            onChange={handleChange}
+            className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Ingresa tu número de WhatsApp"
+            value={formData.phone}
+            onChange={handleChange}
+            className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+          />
+          <select
+            name="timeSlot"
+            value={formData.timeSlot}
+            onChange={handleChange}
+            className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+          >
+            <option value="">Selecciona tu franja horaria</option>
+            <option value="mañana">Mañana</option>
+            <option value="tarde">Tarde</option>
+            <option value="noche">Noche</option>
+          </select>
+          <input
+            type="submit"
+            value="Enviar"
+            className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+            disabled={submitted}
+          />
+        </div>
         <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
           Nuestros asesores se comunicarán contigo a la brevedad.
         </p>
-      </div>
+      </form>
 
+      {/* Los SVGs decorativos se mantienen igual */}
       <div>
         <span className="absolute left-2 top-7">
           <svg

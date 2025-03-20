@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "15.1.6",
+    "firebase": "^11.5.0",
     "framer-motion": "^12.4.10",
     "itwana-soluciones": "file:",
     "next": "^14.2.24",

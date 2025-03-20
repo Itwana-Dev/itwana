@@ -1,8 +1,27 @@
+"use client";
+
 import NewsLatterBox from "./NewsLatterBox";
+import { useContactForm } from "../../hooks/useContactForm"; // Ajusta la ruta según corresponda
 
 const Contact = () => {
+  const { formData, submitted, alert, handleChange, handleSubmit } = useContactForm();
+
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+      {/* Notificación personalizada centrada */}
+      {alert.message && (
+        <div
+          className={`fixed top-1/2 left-1/2 z-50 p-4 rounded shadow-lg transition-opacity duration-300 transform -translate-x-1/2 -translate-y-1/2 ${
+            alert.type === "success"
+              ? "bg-green-500 text-white"
+              : alert.type === "warning"
+              ? "bg-yellow-500 text-black"
+              : "bg-red-500 text-white"
+          }`}
+        >
+          {alert.message}
+        </div>
+      )}
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
@@ -16,7 +35,7 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Nuestro equipo en Itwana Soluciones Tecnológicas te responderá lo antes posible.
               </p>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -28,7 +47,10 @@ const Contact = () => {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         placeholder="Ingresa tu nombre"
+                        value={formData.name}
+                        onChange={handleChange}
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -43,7 +65,10 @@ const Contact = () => {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         placeholder="Ingresa tu correo electrónico"
+                        value={formData.email}
+                        onChange={handleChange}
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -58,7 +83,10 @@ const Contact = () => {
                       </label>
                       <input
                         type="text"
+                        name="company"
                         placeholder="Ingresa el nombre de tu empresa"
+                        value={formData.company}
+                        onChange={handleChange}
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -73,7 +101,10 @@ const Contact = () => {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         placeholder="Ingresa tu número de contacto"
+                        value={formData.phone}
+                        onChange={handleChange}
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -89,13 +120,19 @@ const Contact = () => {
                       <textarea
                         name="message"
                         rows={5}
-                        placeholder="Aqui puedes escribir tu mensaje queremos conecterte a ti y a tu negocio"
+                        placeholder="Aquí puedes escribir tu mensaje. Queremos conectarte a ti y a tu negocio"
+                        value={formData.message}
+                        onChange={handleChange}
                         className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       ></textarea>
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                    <button
+                      type="submit"
+                      className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                      disabled={submitted}
+                    >
                       Enviar Mensaje
                     </button>
                   </div>
