@@ -15,7 +15,7 @@ const Blog = () => {
     <>
       <Breadcrumb
         pageName="Itwana Tips"
-        description="En esta era digital es importante estar a la vanguardia con cada avance tecnologico que hay dia a dia inteligencia artificial para negocios,tendencias digitales y marketing digital te contamos un poco en nuestro blog."
+        description="En esta era digital es importante estar a la vanguardia con cada avance tecnológico que hay día a día; inteligencia artificial para negocios, tendencias digitales y marketing digital te contamos un poco en nuestro blog."
       />
 
       <section className="pb-[120px] pt-[120px]">
@@ -31,6 +31,7 @@ const Blog = () => {
             ))}
           </div>
 
+          {/*
           <div className="-mx-4 flex flex-wrap" data-wow-delay=".15s">
             <div className="w-full px-4">
               <ul className="flex items-center justify-center pt-8">
@@ -90,6 +91,7 @@ const Blog = () => {
               </ul>
             </div>
           </div>
+          */}
         </div>
       </section>
     </>

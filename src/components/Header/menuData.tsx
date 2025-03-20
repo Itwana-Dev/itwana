@@ -25,7 +25,15 @@ const menuData: Menu[] = [
     title: "Contacto",
     path: "/contact",
     newTab: false,
+  }, 
+  {
+    id: 4,
+    title: "Itwana Plus",
+    path: "/itwanaplus",
+    newTab: false,
   },
+  
+
   
 ];
 export default menuData;
