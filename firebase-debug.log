@@ -1,0 +1,395 @@
+[debug] [2025-03-21T00:08:03.328Z] ----------------------------------------------------------------------
+[debug] [2025-03-21T00:08:03.331Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js hosting:channel:deploy preview_name
+[debug] [2025-03-21T00:08:03.331Z] CLI Version:   13.34.0
+[debug] [2025-03-21T00:08:03.331Z] Platform:      win32
+[debug] [2025-03-21T00:08:03.331Z] Node Version:  v22.14.0
+[debug] [2025-03-21T00:08:03.332Z] Time:          Thu Mar 20 2025 19:08:03 GMT-0500 (hora estándar de Colombia)
+[debug] [2025-03-21T00:08:03.332Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-21T00:08:03.521Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-21T00:08:03.522Z] > authorizing via signed-in user (contacto.itwana@gmail.com)
+[debug] [2025-03-21T00:08:03.522Z] [iam] checking project itwana-web-side for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-03-21T00:08:03.524Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:03.524Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:03.525Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions [none]
+[debug] [2025-03-21T00:08:03.525Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions x-goog-quota-user=projects/itwana-web-side
+[debug] [2025-03-21T00:08:03.525Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-21T00:08:04.465Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions 200
+[debug] [2025-03-21T00:08:04.466Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-21T00:08:04.466Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:04.467Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:04.467Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/itwana-web-side [none]
+[debug] [2025-03-21T00:08:04.992Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/itwana-web-side 200
+[debug] [2025-03-21T00:08:04.992Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/itwana-web-side {"projectId":"itwana-web-side","projectNumber":"426753296810","displayName":"itwana-web-side","name":"projects/itwana-web-side","resources":{"hostingSite":"itwana-web-side"},"state":"ACTIVE","etag":"1_fa690dbd-df8e-44d5-97b9-0b8dd1bef90f"}
+[debug] [2025-03-21T00:08:04.994Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:04.994Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:04.994Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels/preview-name [none]
+[debug] [2025-03-21T00:08:05.569Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels/preview-name 404
+[debug] [2025-03-21T00:08:05.570Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels/preview-name {"error":{"code":404,"message":"Requested entity was not found.","status":"NOT_FOUND"}}
+[debug] [2025-03-21T00:08:05.570Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:05.570Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:05.570Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels?channelId=preview-name [none]
+[debug] [2025-03-21T00:08:05.571Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels?channelId=preview-name {"ttl":"604800s"}
+[debug] [2025-03-21T00:08:06.070Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels?channelId=preview-name 200
+[debug] [2025-03-21T00:08:06.070Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels?channelId=preview-name {"name":"projects/itwana-web-side/sites/itwana-web-side/channels/preview-name","url":"https://itwana-web-side--preview-name-dlfdy82r.web.app","createTime":"2025-03-21T00:08:04.267073224Z","updateTime":"2025-03-21T00:08:04.267073224Z","retainedReleaseCount":10,"expireTime":"2025-03-28T00:08:04.267073224Z"}
+[debug] [2025-03-21T00:08:06.070Z] [hosting] created new channnel for site itwana-web-side {"name":"projects/itwana-web-side/sites/itwana-web-side/channels/preview-name","url":"https://itwana-web-side--preview-name-dlfdy82r.web.app","createTime":"2025-03-21T00:08:04.267073224Z","updateTime":"2025-03-21T00:08:04.267073224Z","retainedReleaseCount":10,"expireTime":"2025-03-28T00:08:04.267073224Z"}
+[info] +  hosting:channel: Channel preview-name has been created on site itwana-web-side. 
+[debug] [2025-03-21T00:08:14.276Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:14.276Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:14.276Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites pageToken=&pageSize=10
+[debug] [2025-03-21T00:08:14.825Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites 200
+[debug] [2025-03-21T00:08:14.825Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites {"sites":[{"name":"projects/itwana-web-side/sites/itwana","defaultUrl":"https://itwana.web.app","appId":"1:426753296810:web:fdcd43ff9817139075c3d3","type":"USER_SITE"},{"name":"projects/itwana-web-side/sites/itwana-web-side","defaultUrl":"https://itwana-web-side.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-03-21T00:08:14.825Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:14.825Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:14.825Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites 
+[debug] [2025-03-21T00:08:15.442Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites 200
+[debug] [2025-03-21T00:08:15.442Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites {"sites":[{"name":"projects/itwana-web-side/sites/itwana","defaultUrl":"https://itwana.web.app","appId":"1:426753296810:web:fdcd43ff9817139075c3d3","type":"USER_SITE"},{"name":"projects/itwana-web-side/sites/itwana-web-side","defaultUrl":"https://itwana-web-side.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-03-21T00:08:15.442Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:15.442Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:15.442Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/itwana-web-side/webApps/-/config [none]
+[debug] [2025-03-21T00:08:15.965Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/itwana-web-side/webApps/-/config 200
+[debug] [2025-03-21T00:08:15.966Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/itwana-web-side/webApps/-/config {"projectId":"itwana-web-side","appId":"1:426753296810:web:fdcd43ff9817139075c3d3","storageBucket":"itwana-web-side.firebasestorage.app","apiKey":"AIzaSyAI3Xzc6dB2ILwM0NHtRkyxvXJQl4qocfk","authDomain":"itwana-web-side.firebaseapp.com","messagingSenderId":"426753296810","measurementId":"G-6FV9X81VR3"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-03-21T00:08:33.970Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:33.971Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:08:33.971Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels/preview-name [none]
+[debug] [2025-03-21T00:08:34.761Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels/preview-name 200
+[debug] [2025-03-21T00:08:34.761Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels/preview-name {"name":"projects/itwana-web-side/sites/itwana-web-side/channels/preview-name","url":"https://itwana-web-side--preview-name-dlfdy82r.web.app","createTime":"2025-03-21T00:08:04.267073224Z","updateTime":"2025-03-21T00:08:04.267073224Z","retainedReleaseCount":10,"expireTime":"2025-03-28T00:08:04.267073224Z"}
+[info]   ▲ Next.js 14.2.24
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+./src/components/Blog/blogData.tsx
+50:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+108:10  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+202:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+248:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+378:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/16) ...
+
+[info]    Generating static pages (4/16) 
+
+[info]    Generating static pages (8/16) 
+
+[info]    Generating static pages (12/16) 
+
+[info]  ✓ Generating static pages (16/16)
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (app)                              Size     First Load JS
+┌ ○ /                                    3.5 kB          113 kB
+├ ○ /_not-found                          872 B            88 kB
+├ ○ /about                               188 B          99.3 kB
+├ ○ /blog                                188 B          99.3 kB
+├ ○ /blog-details                        178 B          92.5 kB
+├ ○ /blog-sidebar                        2.51 kB         211 kB
+├ ● /blog/[id]                           178 B          92.5 kB
+├   ├ /blog/1
+├   ├ /blog/2
+├   └ /blog/3
+├ ○ /contact                             3.56 kB         207 kB
+├ ○ /emprendedores                       4.44 kB         133 kB
+├ ○ /error                               293 B          94.2 kB
+├ ○ /itwanaplus                          1.27 kB        93.6 kB
+└ ○ /services                            2.81 kB         148 kB
++ First Load JS shared by all            87.2 kB
+  ├ chunks/117-a0185af2b3ac0e30.js       31.6 kB
+  ├ chunks/fd9d1056-1f1f859026f5f0fa.js  53.6 kB
+  └ other shared chunks (total)          1.95 kB
+
+
+
+[info] ○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses getStaticProps)
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • use of fallback /blog/[id]
+[info] 
+[debug] [2025-03-21T00:09:25.127Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:25.127Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:25.127Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels/preview-name [none]
+[debug] [2025-03-21T00:09:25.931Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels/preview-name 200
+[debug] [2025-03-21T00:09:25.931Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/itwana-web-side/sites/itwana-web-side/channels/preview-name {"name":"projects/itwana-web-side/sites/itwana-web-side/channels/preview-name","url":"https://itwana-web-side--preview-name-dlfdy82r.web.app","createTime":"2025-03-21T00:08:04.267073224Z","updateTime":"2025-03-21T00:08:04.267073224Z","retainedReleaseCount":10,"expireTime":"2025-03-28T00:08:04.267073224Z"}
+[warn] !  This integration expects Node version 16, 18, or 20. You're running version 22, problems may be encountered. 
+[debug] [2025-03-21T00:09:55.931Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-central1"
+      },
+      "site": "itwana-web-side",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssritwanawebside",
+            "region": "us-central1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/blog-details",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/blog-details/layout,_N_T_/blog-details/page,_N_T_/blog-details"
+            }
+          ]
+        },
+        {
+          "source": "/blog-sidebar",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/blog-sidebar/layout,_N_T_/blog-sidebar/page,_N_T_/blog-sidebar"
+            }
+          ]
+        },
+        {
+          "source": "/_not-found",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
+            }
+          ]
+        },
+        {
+          "source": "/about",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/about/layout,_N_T_/about/page,_N_T_/about"
+            }
+          ]
+        },
+        {
+          "source": "/itwanaplus",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/itwanaplus/layout,_N_T_/itwanaplus/page,_N_T_/itwanaplus"
+            }
+          ]
+        },
+        {
+          "source": "/emprendedores",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/emprendedores/layout,_N_T_/emprendedores/page,_N_T_/emprendedores"
+            }
+          ]
+        },
+        {
+          "source": "/contact",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/contact/layout,_N_T_/contact/page,_N_T_/contact"
+            }
+          ]
+        },
+        {
+          "source": "/services",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/services/layout,_N_T_/services/page,_N_T_/services"
+            }
+          ]
+        },
+        {
+          "source": "/blog",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/blog/layout,_N_T_/blog/page,_N_T_/blog"
+            }
+          ]
+        },
+        {
+          "source": "/error",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/error/layout,_N_T_/error/page,_N_T_/error"
+            }
+          ]
+        },
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoiaXR3YW5hLXdlYi1zaWRlIiwiYXBwSWQiOiIxOjQyNjc1MzI5NjgxMDp3ZWI6ZmRjZDQzZmY5ODE3MTM5MDc1YzNkMyIsInN0b3JhZ2VCdWNrZXQiOiJpdHdhbmEtd2ViLXNpZGUuZmlyZWJhc2VzdG9yYWdlLmFwcCIsImFwaUtleSI6IkFJemFTeUFJM1h6YzZkQjJJTHdNME5IdFJreXh2WEpRbDRxb2NmayIsImF1dGhEb21haW4iOiJpdHdhbmEtd2ViLXNpZGUuZmlyZWJhc2VhcHAuY29tIiwibWVzc2FnaW5nU2VuZGVySWQiOiI0MjY3NTMyOTY4MTAiLCJtZWFzdXJlbWVudElkIjoiRy02RlY5WDgxVlIzIn0sIl9hdXRoVG9rZW5TeW5jVVJMIjoiL19fc2Vzc2lvbiJ9; SameSite=Strict; Expires=2027-02-13T10:49:55.931Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase\\itwana-web-side\\hosting",
+      "webFramework": "next_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase\\itwana-web-side\\functions",
+      "codebase": "firebase-frameworks-itwana-web-side"
+    }
+  ]
+}
+[debug] [2025-03-21T00:09:55.931Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-21T00:09:55.932Z] > authorizing via signed-in user (contacto.itwana@gmail.com)
+[debug] [2025-03-21T00:09:55.932Z] [iam] checking project itwana-web-side for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-03-21T00:09:55.932Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:55.932Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:55.932Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions [none]
+[debug] [2025-03-21T00:09:55.932Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions x-goog-quota-user=projects/itwana-web-side
+[debug] [2025-03-21T00:09:55.932Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-03-21T00:09:56.310Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions 200
+[debug] [2025-03-21T00:09:56.311Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-03-21T00:09:56.311Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:56.311Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:56.311Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/itwana-web-side/locations/-/functions [none]
+[debug] [2025-03-21T00:09:57.268Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/itwana-web-side/locations/-/functions 200
+[debug] [2025-03-21T00:09:57.268Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/itwana-web-side/locations/-/functions {}
+[debug] [2025-03-21T00:09:57.269Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.269Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.269Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/itwana-web-side/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-03-21T00:09:57.796Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/itwana-web-side/locations/-/functions 200
+[debug] [2025-03-21T00:09:57.797Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/itwana-web-side/locations/-/functions {}
+[info] i  hosting: The following function(s) are pinned to site itwana-web-side and will be deployed as well: ssritwanawebside 
+[info] 
+[info] === Deploying to 'itwana-web-side'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2025-03-21T00:09:57.799Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.799Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.799Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side [none]
+[debug] [2025-03-21T00:09:57.962Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side 200
+[debug] [2025-03-21T00:09:57.962Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/itwana-web-side {"projectNumber":"426753296810","projectId":"itwana-web-side","lifecycleState":"ACTIVE","name":"itwana-web-side","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-03-20T21:32:17.158911Z"}
+[info] i  functions: preparing codebase firebase-frameworks-itwana-web-side for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-03-21T00:09:57.963Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.964Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.964Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.964Z] Checked if tokens are valid: true, expires at: 1742518312849
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-03-21T00:09:57.964Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.964Z] Checked if tokens are valid: true, expires at: 1742518312849
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-03-21T00:09:57.964Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.964Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:57.964Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-03-21T00:09:57.964Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/itwana-web-side
+[debug] [2025-03-21T00:09:57.966Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-03-21T00:09:57.966Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/itwana-web-side
+[debug] [2025-03-21T00:09:57.967Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/cloudbuild.googleapis.com [none]
+[debug] [2025-03-21T00:09:57.967Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/cloudbuild.googleapis.com x-goog-quota-user=projects/itwana-web-side
+[debug] [2025-03-21T00:09:57.967Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/artifactregistry.googleapis.com [none]
+[debug] [2025-03-21T00:09:57.967Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/artifactregistry.googleapis.com x-goog-quota-user=projects/itwana-web-side
+[debug] [2025-03-21T00:09:58.808Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/cloudbuild.googleapis.com 200
+[debug] [2025-03-21T00:09:58.808Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-03-21T00:09:58.821Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/runtimeconfig.googleapis.com 200
+[debug] [2025-03-21T00:09:58.821Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-03-21T00:09:58.858Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/cloudfunctions.googleapis.com 200
+[debug] [2025-03-21T00:09:58.858Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-03-21T00:09:58.869Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/artifactregistry.googleapis.com 200
+[debug] [2025-03-21T00:09:58.869Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/itwana-web-side/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-03-21T00:09:58.870Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:58.870Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:58.870Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/itwana-web-side/adminSdkConfig [none]
+[debug] [2025-03-21T00:09:59.345Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/itwana-web-side/adminSdkConfig 200
+[debug] [2025-03-21T00:09:59.345Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/itwana-web-side/adminSdkConfig {"projectId":"itwana-web-side","storageBucket":"itwana-web-side.firebasestorage.app"}
+[debug] [2025-03-21T00:09:59.346Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:59.346Z] Checked if tokens are valid: true, expires at: 1742518312849
+[debug] [2025-03-21T00:09:59.346Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/itwana-web-side/configs [none]
+[debug] [2025-03-21T00:09:59.981Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/itwana-web-side/configs 200
+[debug] [2025-03-21T00:09:59.981Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/itwana-web-side/configs {}
+[debug] [2025-03-21T00:09:59.983Z] Validating nodejs source
+[debug] [2025-03-21T00:10:03.796Z] > [functions] package.json contents: {
+  "name": "itwana-soluciones",
+  "version": "2.1.0",
+  "private": true,
+  "dependencies": {
+    "@firebasegen/default-connector": "file:firebasegen-default-connector-1.0.0.tgz",
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "15.1.6",
+    "firebase": "^11.5.0",
+    "framer-motion": "^12.4.10",
+    "itwana-soluciones": "file:",
+    "next": "^14.2.24",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-modal-video": "^2.0.2",
+    "startup-nextjs-template": "file:",
+    "firebase-frameworks": "^0.11.0",
+    "firebase-functions": "^6.0.1",
+    "firebase-admin": "^11.11.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "20"
+  }
+}
+[debug] [2025-03-21T00:10:03.796Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-itwana-web-side to determine what to deploy 
+[debug] [2025-03-21T00:10:03.797Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-03-21T00:10:03.803Z] Found firebase-functions binary at 'C:\Users\USER\Desktop\ItwanaPlus\sitio web\.firebase\itwana-web-side\functions\node_modules\.bin\firebase-functions'
+[debug] [2025-03-21T00:10:04.545Z] Error: spawn UNKNOWN
+    at ChildProcess.spawn (node:internal/child_process:420:11)
+    at Object.spawn (node:child_process:753:9)
+    at spawn (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\index.js:12:24)
+    at Delegate.serveAdmin (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\index.js:116:38)
+    at Delegate.discoverBuild (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\index.js:168:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async loadCodebases (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\prepare.js:323:32)
+    at async prepare (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\prepare.js:59:24)
+    at async chain (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:40:9)
+    at async deploy (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:111:5)
+[error] 
+[error] Error: An unexpected error has occurred.
