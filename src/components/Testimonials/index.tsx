@@ -14,7 +14,7 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Amaury Centeno",
+    name: "Amaury Centeno Arias",
     designation: "Founder SevenPlus",
     content:
       "La plataforma creada para organizar torneos de deportes amateurs superó todas nuestras expectativas. Ha facilitado la gestión de equipos y ha avivado la pasión por el juego de manera impresionante.",
