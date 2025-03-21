@@ -8,16 +8,16 @@ const testimonialData: Testimonial[] = [
     name: "Daniela Claros Andrade",
     designation: "Co-fundadora @todasflorecemos",
     content:
-      "Diseñamos un MVP de nuestra app Bolsas Campesinas, acercando a las mujeres del campo a la tecnología y brindándoles nuevas oportunidades de comercialización.",
+      "El MVP desarrollado para Bolsas Campesinas fue excepcional. Gracias a esta solución, las mujeres del campo se conectan con la tecnología y ahora tienen nuevas y prometedoras oportunidades de comercialización.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
     name: "Amaury Centeno",
-    designation: "Founder SevenPlus ",
+    designation: "Founder SevenPlus",
     content:
-      "Creamos una plataforma para conectar y organizar torneos de deportes amateurs, facilitando la gestión de equipos y la pasión por el juego.",
+      "La plataforma creada para organizar torneos de deportes amateurs superó todas nuestras expectativas. Ha facilitado la gestión de equipos y ha avivado la pasión por el juego de manera impresionante.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -26,7 +26,7 @@ const testimonialData: Testimonial[] = [
     name: "Alba Medina",
     designation: "Co-fundadora @mujeresdeluz",
     content:
-      "Diseñamos una landing impactante para nuestra fundación, transmitiendo nuestra misión y facilitando el apoyo a más mujeres en su camino al empoderamiento.",
+      "El landing diseñado para nuestra fundación realmente marcó la diferencia. Su impacto nos ha permitido transmitir nuestra misión de empoderamiento y atraer el apoyo de muchas más mujeres.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
