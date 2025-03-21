@@ -6,7 +6,7 @@ const testimonialData: Testimonial[] = [
   {
     id: 1,
     name: "Daniela Claros Andrade",
-    designation: "Co-fundadora @todasflorecemos",
+    designation: "Founder Todas Florecemos",
     content:
       "El MVP desarrollado para Bolsas Campesinas fue excepcional. Gracias a esta solución, las mujeres del campo se conectan con la tecnología y ahora tienen nuevas y prometedoras oportunidades de comercialización.",
     image: "/images/testimonials/auth-01.png",
@@ -24,7 +24,7 @@ const testimonialData: Testimonial[] = [
   {
     id: 3,
     name: "Alba Medina",
-    designation: "Co-fundadora @mujeresdeluz",
+    designation: "Co-fundadora Mujeres de luz",
     content:
       "El landing diseñado para nuestra fundación realmente marcó la diferencia. Su impacto nos ha permitido transmitir nuestra misión de empoderamiento y atraer el apoyo de muchas más mujeres.",
     image: "/images/testimonials/auth-03.png",
