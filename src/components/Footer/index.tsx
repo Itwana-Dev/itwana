@@ -170,9 +170,19 @@ const Footer = () => {
                     Backoffice
                     </Link>
                   </li>
-                  
+                  {/* --- NUEVA SECCIÓN AGREGADA AQUÍ --- */}
+                  <li>
+                    <Link
+                      href="/privacy-policy"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Políticas de Privacidad
+                    </Link>
+                  </li>
+                   {/* ---------------------------------- */}
                 </ul>
               </div>
+              
             </div>
           </div>
 
